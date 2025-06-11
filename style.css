@@ -189,6 +189,22 @@ html, body {
   width: 100%;
 }
 
+/* === Updated Contact Form Card Styling to Match Metric Card === */
+#contact .contact-card {
+  background-color: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#contact .contact-card:hover {
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.5);
+}
+
+
 /* === ANIMATIONS === */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -613,6 +629,7 @@ html, body {
 }
 
 
+
 /* === FULL MOBILE OPTIMIZATION === */
 @media (max-width: 768px) {
  
@@ -867,3 +884,80 @@ html, body {
 
 
 
+
+/* Star Rating Styles */
+.stars {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  color: #f472b6; /* pink-400 */
+  text-shadow: 0 0 5px #f472b6, 0 0 10px #f472b6;
+}
+
+@media (max-width: 640px) {
+  .stars {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Futuristic Progress Bars */
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  line-height: 1;
+  text-align: right;
+  padding-right: 6px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: width 1s ease-in-out;
+  opacity: 0.9;
+}
+
+/* Individual skill fill colors */
+.fill-html {
+  background: linear-gradient(90deg, #8e55d8, #ff60ba);
+  width: 90%;
+}
+.fill-css {
+  background: linear-gradient(90deg, #8e55d8, #ff60ba);
+  width: 80%;
+}
+.fill-js {
+  background: linear-gradient(90deg, #8e55d8, #ff60ba);
+  width: 70%;
+}
+
+.progress-fill:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+/* Metric Card Style for Skills */
+.metric-card {
+  background-color: rgba(17, 24, 39, 0.6); 
+  border: 1px solid rgba(236, 72, 153, 0.3); 
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.metric-card:hover {
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.5);
+}

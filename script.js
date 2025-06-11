@@ -313,3 +313,27 @@ function handleDataRefresh() {
 document.addEventListener('DOMContentLoaded', () => {
   initParticles();
 });
+
+
+// Animate star ratings on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const starContainer = document.querySelector(".stars");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll(".stars").forEach((el, i) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(10px)";
+          setTimeout(() => {
+            el.style.transition = "all 0.6s ease-out";
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          }, i * 200);
+        });
+      }
+    });
+  }, { threshold: 0.6 });
+
+  const target = document.querySelector("#hero");
+  if (target) observer.observe(target);
+});
